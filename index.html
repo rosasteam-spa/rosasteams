@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosa's Team - Spa Capilar</title>
+    <style>
+        :root {
+            --primary: #d4a373;
+            --primary-dark: #b98453;
+            --secondary: #fae1dd;
+            --text-color: #333333;
+            --bg-light: #fefae0;
+            --white: #ffffff;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-color);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+        header {
+            background-color: var(--white);
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo {
+            font-weight: bold;
+            font-size: 24px;
+            color: var(--primary-dark);
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+        nav a:hover {
+            color: var(--primary-dark);
+        }
+        .hero {
+            background: linear-gradient(rgba(254, 250, 224, 0.8), rgba(254, 250, 224, 0.8)), url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: var(--primary-dark);
+        }
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-dark);
+            color: var(--white);
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: var(--primary);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        h2 {
+            font-size: 32px;
+            color: var(--primary-dark);
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+        }
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary);
+            margin: 10px auto 0;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+        .card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-dark);
+        }
+        .installations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        @media(max-width: 600px) {
+            .installations-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .installation-item {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .installation-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+        .installation-info {
+            padding: 20px;
+            text-align: center;
+        }
+        .installation-info h3 {
+            color: var(--primary-dark);
+            margin-bottom: 5px;
+        }
+        .contact-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+        }
+        .contact-info ul {
+            list-style: none;
+        }
+        .contact-info li {
+            margin-bottom: 15px;
+        }
+        .map-container {
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        footer {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+        }
+        footer a {
+            color: var(--secondary);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">Rosa's Team</div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre-mi">Sobre Mí</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#instalaciones">Instalaciones</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="inicio" class="hero">
+        <h1>Rosa's Team - Spa Capilar</h1>
+        <p>Tu estilo, tu poder, donde tu belleza florece</p>
+        <h2>Tu bienestar comienza aquí</h2>
+        <p>Una experiencia de belleza, relajación y atención personalizada.</p>
+        <a href="https://wa.me/34640657273" class="btn" target="_blank">Reserva tu experiencia por WhatsApp</a>
+    </div>
+
+    <div class="container">
+        <section id="sobre-mi">
+            <h2>Sobre Nosotros</h2>
+            <div class="card">
+                <h3>Rosa, más de 20 años de experiencia</h3>
+                <p>Nuestra filosofía se basa en ofrecer una atención cercana, bienestar absoluto y tratamientos totalmente personalizados para el cuidado de tu cabello y cuero cabelludo.</p>
+                <p style="margin-top: 15px;">Especializada en alta peluquería, he ampliado mis servicios incorporando un avanzado concepto de <strong>SPA Capilar</strong>, combinando la estética clásica con la salud y relajación profunda que tu cuerpo y mente necesitan.</p>
+            </div>
+        </section>
+
+        <section id="servicios">
+            <h2>Nuestros Servicios</h2>
+            <div class="services-grid">
+                <div class="card">
+                    <h3>SPA Capilar Personalizado</h3>
+                    <p>Sumerge tu mente y cabello en un oasis de relajación. Tratamiento integral de hidratación, estimulación y masajes capilares sensoriales.</p>
+                </div>
+                <div class="card">
+                    <h3>Diagnóstico y Tricograma</h3>
+                    <p>Análisis minucioso del estado de tu cuero cabelludo y fibra mediante microcámara avanzada para aplicar la solución idónea.</p>
+                </div>
+                <div class="card">
+                    <h3>Salud del Cuero Cabelludo</h3>
+                    <p>Tratamientos específicos diseñados profesionalmente para combatir la seborrea (grasa), descamación, caspa y la caída capilar.</p>
+                </div>
+                <div class="card">
+                    <h3>Tratamientos con Barros</h3>
+                    <p>Coloración y terapia botánica 100% orgánica que respeta la estructura capilar, aportando un brillo inigualable y fuerza.</p>
+                </div>
+                <div class="card">
+                    <h3>Visagismo y Peluquería</h3>
+                    <p>Asesoría de imagen integral basada en tus rasgos. Cortes, color, peinados y técnicas de vanguardia que potencian tu poder.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="instalaciones">
+            <h2>Nuestras Instalaciones</h2>
+            <div class="installations-grid">
+                <div class="installation-item">
+                    <img src="image_yM00GG.png" alt="Instalaciones del salón - Recepción, Sala de Espera y Zona de Entrevistas">
+                    <div class="installation-info">
+                        <h3>Ambientes del Salón</h3>
+                        <p>Detalle de la Recepción, Sala de espera y Zona de entrevistas y asesoramiento.</p>
+                    </div>
+                </div>
+                <div class="installation-item">
+                    <img src="image_l-3f6o.png" alt="Plano 3D de la distribución del Spa Capilar y Peluquería">
+                    <div class="installation-info">
+                        <h3>Distribución General 3D</h3>
+                        <p>Vista completa y diseño del espacio pensado para tu máxima comodidad y relajación.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto y Ubicación</h2>
+            <div class="contact-section">
+                <div class="contact-info">
+                    <h3>Rosa's Team Spa Capilar</h3>
+                    <ul style="margin-top: 20px;">
+                        <li><strong>Dirección:</strong> Avenida Cuestas Blancas, 19, Villacañas, Toledo</li>
+                        <li><strong>Teléfono:</strong> <a href="tel:+34640657273" style="color: var(--primary-dark); text-decoration: none; font-weight: bold;">+34 640 65 72 73</a></li>
+                        <li><strong>Horarios:</strong><br>
+                            Lunes a Viernes: 09:30 a 13:00 | 16:00 a 19:00<br>
+                            Sábados: 10:00 a 13:00<br>
+                            Domingos: Cerrado
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/34640657273" class="btn" target="_blank">Solicitar cita por WhatsApp</a>
+                </div>
+                <div class="map-container">
+                    <!-- Mapa embebido de Google Maps centrado en la zona aproximada de la Av. Cuestas Blancas en Villacañas -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3071.123456789!2d-3.3375!3d39.625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzlCsDM3JzMwLjAiTiAzwrAyMCcxNS4wIlc!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p><strong>Rosa's Team Spa Capilar</strong></p>
+        <p>Tu estilo, tu poder, donde tu belleza florece.</p>
+        <p style="margin-top: 15px;"><a href="#">Aviso Legal</a> | <a href="#">Política de Privacidad</a></p>
+        <p style="margin-top: 10px;">&copy; 2026 Rosa's Team Spa Capilar. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
